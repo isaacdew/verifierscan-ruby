@@ -1,0 +1,37 @@
+<%= form_for(threat_match) do |f| %>
+  <% if threat_match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(threat_match.errors.count, "error") %> prohibited this threat_match from being saved:</h2>
+
+      <ul>
+      <% threat_match.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :threat_type %>
+    <%= f.text_field :threat_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :platform_type %>
+    <%= f.text_field :platform_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :caching %>
+    <%= f.text_field :caching %>
+  </div>
+
+  <div class="field">
+    <%= f.label :domain_id %>
+    <%= f.text_field :domain_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  threat_type: MyString
+  platform_type: MyString
+  caching: MyString
+  domain: one
+
+two:
+  threat_type: MyString
+  platform_type: MyString
+  caching: MyString
+  domain: two
