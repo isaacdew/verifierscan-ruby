@@ -1,0 +1,42 @@
+<%= form_for(domain) do |f| %>
+  <% if domain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(domain.errors.count, "error") %> prohibited this domain from being saved:</h2>
+
+      <ul>
+      <% domain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :root %>
+    <%= f.text_field :root %>
+  </div>
+
+  <div class="field">
+    <%= f.label :operation_location %>
+    <%= f.text_field :operation_location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hosting %>
+    <%= f.text_field :hosting %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hosting_score %>
+    <%= f.text_field :hosting_score %>
+  </div>
+
+  <div class="field">
+    <%= f.label :organization_id %>
+    <%= f.text_field :organization_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
