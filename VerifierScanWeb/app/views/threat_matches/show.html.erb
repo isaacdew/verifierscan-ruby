@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Threat type:</strong>
+  <%= @threat_match.threat_type %>
+</p>
+
+<p>
+  <strong>Platform type:</strong>
+  <%= @threat_match.platform_type %>
+</p>
+
+<p>
+  <strong>Caching:</strong>
+  <%= @threat_match.caching %>
+</p>
+
+<p>
+  <strong>Domain:</strong>
+  <%= @threat_match.domain %>
+</p>
+
+<%= link_to 'Edit', edit_threat_match_path(@threat_match) %> |
+<%= link_to 'Back', threat_matches_path %>

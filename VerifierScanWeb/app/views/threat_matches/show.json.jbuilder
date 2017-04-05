@@ -1,0 +1,1 @@
+json.partial! "threat_matches/threat_match", threat_match: @threat_match
