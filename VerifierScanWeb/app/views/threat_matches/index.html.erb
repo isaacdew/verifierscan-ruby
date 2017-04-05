@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Threat Matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Threat type</th>
+      <th>Platform type</th>
+      <th>Caching</th>
+      <th>Domain</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @threat_matches.each do |threat_match| %>
+      <tr>
+        <td><%= threat_match.threat_type %></td>
+        <td><%= threat_match.platform_type %></td>
+        <td><%= threat_match.caching %></td>
+        <td><%= threat_match.domain %></td>
+        <td><%= link_to 'Show', threat_match %></td>
+        <td><%= link_to 'Edit', edit_threat_match_path(threat_match) %></td>
+        <td><%= link_to 'Destroy', threat_match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Threat Match', new_threat_match_path %>

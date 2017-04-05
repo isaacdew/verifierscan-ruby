@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  root: MyString
+  operation_location: MyString
+  hosting: MyString
+  hosting_score: 9.99
+  organization: one
+
+two:
+  root: MyString
+  operation_location: MyString
+  hosting: MyString
+  hosting_score: 9.99
+  organization: two

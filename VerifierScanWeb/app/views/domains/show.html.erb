@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Root:</strong>
+  <%= @domain.root %>
+</p>
+
+<p>
+  <strong>Operation location:</strong>
+  <%= @domain.operation_location %>
+</p>
+
+<p>
+  <strong>Hosting:</strong>
+  <%= @domain.hosting %>
+</p>
+
+<p>
+  <strong>Hosting score:</strong>
+  <%= @domain.hosting_score %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @domain.organization %>
+</p>
+
+<%= link_to 'Edit', edit_domain_path(@domain) %> |
+<%= link_to 'Back', domains_path %>

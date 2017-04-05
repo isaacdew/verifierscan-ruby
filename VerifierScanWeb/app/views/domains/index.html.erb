@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Domains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Root</th>
+      <th>Operation location</th>
+      <th>Hosting</th>
+      <th>Hosting score</th>
+      <th>Organization</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @domains.each do |domain| %>
+      <tr>
+        <td><%= domain.root %></td>
+        <td><%= domain.operation_location %></td>
+        <td><%= domain.hosting %></td>
+        <td><%= domain.hosting_score %></td>
+        <td><%= domain.organization %></td>
+        <td><%= link_to 'Show', domain %></td>
+        <td><%= link_to 'Edit', edit_domain_path(domain) %></td>
+        <td><%= link_to 'Destroy', domain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Domain', new_domain_path %>
